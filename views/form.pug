@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    h2 Enter your message
+    form(action='/new', method='POST')
+        input(type='text', name='user', value='', placeholder='User name')
+        br
+        label(for='text') Message:
+        br
+        textarea.no-resize(id='text' name="text", cols="32", rows="10") 
+        br
+        input(type='submit', value='Submit')

@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1= title
+
+  a(href='/new') Post a Message 
+
+  ul
+  each msg in messages
+    li.no-bullets
+      h3=msg.user
+      p
+        =msg.text 
+      p.msg-date
+        =msg.added.getFullYear() + '/' + msg.added.getMonth() + '/' + msg.added.getDate()
+
+
+
